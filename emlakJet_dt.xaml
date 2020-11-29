@@ -1,0 +1,110 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="emlakJet_dt" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="614,916" sap2010:WorkflowViewState.IdRef="emlakJet_dt_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="23">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="18">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="emlakJet_dt" sap:VirtualizedContainerService.HintSize="518,856" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_emlakJet" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="476,764" sap2010:WorkflowViewState.IdRef="Sequence_14">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser ' stanbulS Page'" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="BrowserScope_4" InformativeScreenshot="4415903e4d262f1425af8ae1a482e805" Selector="&lt;html app='chrome.exe' title='İstanbul Sahibinden Kiralık Ev - Emlakjet' /&gt;">
+        <ui:BrowserScope.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_12">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ExtractData DelayBetweenPagesMS="{x:Null}" ContinueOnError="True" DataTable="[dt_emlakJet]" DisplayName="Extract Structured Data 'DIV  __next'" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='3'/&gt;&lt;webctrl tag='div' class='oQ9gv' idx='1'/&gt;&lt;webctrl tag='div' class='_3EvdD' idx='1'/&gt;&lt;webctrl tag='div' class='ej73 _3oxy5' idx='1'/&gt;&lt;webctrl tag='div' class='ej74 ej110 ej166 _25Z8c' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' class='w_bXG'/&gt;&lt;webctrl tag='a' class='w_bXG' idx='1'/&gt;&lt;webctrl tag='div' class='_1OkN0' idx='1'/&gt;&lt;/row&gt;&lt;column exact='1' name='Acıklama' attr='text'&gt;&lt;webctrl tag='div' idx='3'/&gt;&lt;webctrl tag='div' class='oQ9gv' idx='1'/&gt;&lt;webctrl tag='div' class='_3EvdD' idx='1'/&gt;&lt;webctrl tag='div' class='ej73 _3oxy5' idx='1'/&gt;&lt;webctrl tag='div' class='ej74 ej110 ej166 _25Z8c' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' class='w_bXG'/&gt;&lt;webctrl tag='a' class='w_bXG' idx='1'/&gt;&lt;webctrl tag='div' class='_1OkN0' idx='1'/&gt;&lt;webctrl tag='div' class='_1kzWx' idx='1'/&gt;&lt;/column&gt;&lt;column exact='1' name='Semt' attr='text'&gt;&lt;webctrl tag='div' idx='3'/&gt;&lt;webctrl tag='div' class='oQ9gv' idx='1'/&gt;&lt;webctrl tag='div' class='_3EvdD' idx='1'/&gt;&lt;webctrl tag='div' class='ej73 _3oxy5' idx='1'/&gt;&lt;webctrl tag='div' class='ej74 ej110 ej166 _25Z8c' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' class='w_bXG'/&gt;&lt;webctrl tag='a' class='w_bXG' idx='1'/&gt;&lt;webctrl tag='div' class='_1OkN0' idx='1'/&gt;&lt;webctrl tag='div' class='_2IP2Y' text='Daire -' idx='1'/&gt;&lt;webctrl tag='span' idx='1'/&gt;&lt;/column&gt;&lt;column exact='1' name='Fiyat' attr='text'&gt;&lt;webctrl tag='div' idx='3'/&gt;&lt;webctrl tag='div' class='oQ9gv' idx='1'/&gt;&lt;webctrl tag='div' class='_3EvdD' idx='1'/&gt;&lt;webctrl tag='div' class='ej73 _3oxy5' idx='1'/&gt;&lt;webctrl tag='div' class='ej74 ej110 ej166 _25Z8c' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' class='w_bXG'/&gt;&lt;webctrl tag='a' class='w_bXG' idx='1'/&gt;&lt;webctrl tag='div' class='_1OkN0' idx='1'/&gt;&lt;webctrl tag='div' class='_3NCDx' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='p' class='_4KRgf' idx='1'/&gt;&lt;webctrl tag='span' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_4" MaxNumberOfResults="0" NextLinkSelector="&lt;webctrl aaname='navigate_next' parentid='__next' tag='I' /&gt;" SimulateClick="True">
+                <ui:ExtractData.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="a1db2d46e3ba8b0d1d39e3c7a7c55286" Selector="&lt;webctrl id='__next' tag='DIV' /&gt;" WaitForReady="COMPLETE">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                  </ui:Target>
+                </ui:ExtractData.Target>
+              </ui:ExtractData>
+            </Sequence>
+          </ActivityAction>
+        </ui:BrowserScope.Body>
+      </ui:BrowserScope>
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" WorkbookPath="C:\Users\ceren\Desktop\emlak2.xlsx">
+        <ui:ExcelApplicationScope.Body>
+          <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_13">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ExcelWriteRange AddHeaders="False" DataTable="[dt_emlakJet]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_4" SheetName="EmlakJet" StartingCell="A1" />
+            </Sequence>
+          </ActivityAction>
+        </ui:ExcelApplicationScope.Body>
+      </ui:ExcelApplicationScope>
+    </Sequence>
+  </Sequence>
+</Activity>
